@@ -1,0 +1,65 @@
+#+TITLE: Research Log 
+#+AUTHOR: Victor Gan
+
+* Problems
+
+* <2015-02-25 Wed>
+
+** Video object proposals
+I watched Geoff Hinton's talk at UBC
+(https://www.youtube.com/watch?v=vShMxxqtDDs) where he mentions
+identifying objects is insanely complicated to do by learning. I want
+to do it, perhaps using video RGBD. 
+
+Two potential papers:
+http://www.umiacs.umd.edu/~mishraka/Files/segRGBD_ICRA_2012.pdf and
+http://www.cs.berkeley.edu/~sgupta/pdf/rcnn-depth.pdf
+
+I want to identify good objects in an unsupervised way, sort of like
+object proposals but with almost perfect precision/recall. Object
+detection without caring about what the object is. So far it's hard to
+do that with plain images. It might be easier to do that with moving
+objects.
+*** TODO Idea: Perfect object-in-scene detection, without caring about labels.
+
+*** Object Proposals
+So Beneson and Piotr released a new object proposal benchmark. Sort of read it.
+https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/object-recognition-and-scene-understanding/how-good-are-detection-proposals-really/
+With code: https://github.com/hosang/detection-proposals
+I cloned it as detection-proposals.
+
+** Nature: DNN for reinforcement learning
+Google released a game-learning RL DNN: http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html
+Saved as mnih2015human.
+
+I want to implement a basic reinforcement learning routine to understand it.
+*** TODO Implement: Basic reinforcement learning routine
+*** TODO Implement: Google's DNN RL
+
+** Organize Ubuntu Computer's Dotfiles
+I want to organize my dotfiles on the Ubuntu computer. Change my vim repository to a dotfiles repository.
+Looking at https://dotfiles.github.io/:
+
+Basic dotfile tutorial: https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
+Ahh. Is there no decent tutorial for this?!
+This seems to be a decent one: https://github.com/webpro/dotfiles
+Forked!
+
+*** Bash command: source
+source is a bash shell built-in command that executes the content of
+the file passed as argument, in the current shell. It has a synonym in
+'.' (period).
+Syntax
+      . filename [arguments]
+
+      source filename [arguments]
+
+    CLOCK: [2015-02-25 Wed 18:01]
+
+Okay, modifying some more.
+
+
+* <2015-02-23 Mon>
+   I installed vimperator.
+   Wow this is actually really great. 
+   Okay, it saved. I lied.
