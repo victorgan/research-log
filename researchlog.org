@@ -60,6 +60,11 @@ Yeah! I have emacs on ubuntu.
 grimbergen seems to lock up sometimes. I don't know why.
 Now to find out how to automatically commit.
 
+Github on which URL I should use.
+https://help.github.com/articles/which-remote-url-should-i-use/
+
+So I want to not have to login all the time. To do that I set up an ssh key:
+https://help.github.com/articles/generating-ssh-keys/
 
 * <2015-02-23 Mon>
    I installed vimperator.
