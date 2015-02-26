@@ -54,9 +54,11 @@ Syntax
 
       source filename [arguments]
 
-    CLOCK: [2015-02-25 Wed 18:01]
 
 Okay, modifying some more.
+Yeah! I have emacs on ubuntu.
+grimbergen seems to lock up sometimes. I don't know why.
+Now to find out how to automatically commit.
 
 
 * <2015-02-23 Mon>
