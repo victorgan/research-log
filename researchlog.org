@@ -1,10 +1,89 @@
 #+TITLE: Research Log 
 #+AUTHOR: Victor Gan
 
+* <2015-02-27 Fri> 
+Julieta presented a really good paper in CVRG. Also, she referenced a
+2010 paper from Malik that's also good.
+
+** Stop GEdit from Making Backup Files
+http://askubuntu.com/questions/83026/prevent-gedit-from-creating-files-with-the-tilde-suffix
+
+** Make matlab terminal command
+http://askubuntu.com/questions/185763/how-can-i-launch-matlab-2012
+
+In short: make a symbolic link for the entire system and always run as root.
+
+** Running fragkiadaki2014grouping
+
+Following the readme, I extracted the files.
+
+My idea: Do this but with RGB-D videos. 
+
+** Thoughts on Video Object proposals
+
+Quote:
+"image segmentation", the partitioning of an image (or video stream)
+into sets of pixels that correspond to "objects" or parts of
+objects. This process is based on bottom up cues such as similarity of
+pixel brightness, color, texture and motion as well as top down input
+derived from familiar object categories such as faces.
+
+I don't think this is the right way. Humans know things from motion
+and depth. And if we can use motion and depth to get better object
+proposals, we can automatically train a dataset, which can then be
+used for other things.
+
+Berkeley does segmentation:
+http://http.cs.berkeley.edu/Research/Projects/CS/vision/grouping/
+
+From the group:
+Simultaneous detection and segmentation:
+http://http.cs.berkeley.edu/Research/Projects/CS/vision/papers/BharathECCV2014.pdf
+
+Learning Rich Features from RGB-D Images for Object Detection and Segmentation:
+http://http.cs.berkeley.edu/Research/Projects/CS/vision/papers/SaurabhECCV2014.pdf
+
+** RGB-D Optical Flow
+https://homes.cs.washington.edu/~xren/publication/herbst-icra13-rgbd-flow.pdf
+
+** TODO Idea: Interesting Event Detection
+Optical flow + method to find non-linear dynamics in flow field =
+interesting events
+
+Images linear until edges of 
+
+** TODO Idea: What colour do I call this?
+Find out how people perceive colours.
+Two light sources, iterate through white balances, see how the colour
+of objects change in different lighting
+
+** Random browsing about RGBD
+RSS RGBD Workshop 2014: http://www.cs.cornell.edu/~hema/rgbd-workshop-2014/program.html
+http://www.cs.cornell.edu/~hema/rgbd-workshop-2014/talks/NoahSnavely_RGBD2014.pdf
+
+In http://www.cs.cornell.edu/~hema/rgbd-workshop-2014/talks/rgbd-robotics-fox.pdf:
+There is a slide saying (p. 22) RGBD object recognition might not be researchy enough
+
+** TODO Idea: Replace/initialize first layer of deep network with gabor filters
+
+** Optical Flow, an Overview
+Datasets: Middlebury, MPI Sintel, and KITTI datasets 
+
+Original formulation: Horn and Schunck
+
+Review paper: 
+A quantitative analysis of current practices in optical flow estimation and the principles behind them
+sun2014quantitative
+
+Quotes:
+We discover that classical flow formulations perform surprisingly well
+when combined with modern optimization and implementation techniques
+
 
 * <2015-02-26 Thu> 
   
-I want to install iHaskell and iPython.
+** iHaskell and iPython.
+I installed iPython.
 
 * <2015-02-25 Wed>
 
@@ -68,6 +147,17 @@ https://help.github.com/articles/which-remote-url-should-i-use/
 
 So I want to not have to login all the time. To do that I set up an ssh key:
 https://help.github.com/articles/generating-ssh-keys/
+
+https://help.github.com/articles/changing-a-remote-s-url/
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/#platform-linux
+
+echo "# sun2014quantitative" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:victorgan/sun2014quantitative.git
+git push -u origin master
 
 Testing. Okay maybe it works, maybe it doesn't.
 
