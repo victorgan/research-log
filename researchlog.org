@@ -1,6 +1,9 @@
 #+TITLE: Research Log 
 #+AUTHOR: Victor Gan
 
+* <2015-03-03 Tue>
+** Ranking of CS Conferences
+http://academic.research.microsoft.com/RankList?entitytype=3&topDomainID=2&subDomainID=0 
 * <2015-02-28 Sat>
 
 ** iHaskell
