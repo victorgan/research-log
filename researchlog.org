@@ -1,6 +1,10 @@
 #+TITLE: Research Log 
 #+AUTHOR: Victor Gan
 
+* <2015-02-28 Sat>
+
+** iHaskell
+
 * <2015-02-27 Fri> 
 Julieta presented a really good paper in CVRG. Also, she referenced a
 2010 paper from Malik that's also good.
@@ -74,6 +78,8 @@ Original formulation: Horn and Schunck
 Review paper: 
 A quantitative analysis of current practices in optical flow estimation and the principles behind them
 sun2014quantitative
+
+I downloaded the code and it works!
 
 Quotes:
 We discover that classical flow formulations perform surprisingly well
