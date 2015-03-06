@@ -1,5 +1,94 @@
 #+TITLE: Research Log 
 #+AUTHOR: Victor Gan
+* <2015-03-05 Thu>
+** Path/Motion Planning
+http://en.wikipedia.org/wiki/Motion_planning
+
+
+
+Problem: I want to simultaneously
+
+- move around to get closer to a parking spot
+- detect a parking spot
+
+Optimize for:
+- minimize path length
+- minimize time to park
+
+Constraints:
+- non-holonomic wheelchair
+  http://en.wikipedia.org/wiki/Parallel_parking_problem
+- minimize energy used
+
+Etc:
+- no need for map
+- exploration vs exploitation: finding a good 
+
+*** Piano Mover's Problem (Classic Motion Planning)
+http://www.cs.arizona.edu/classes/cs437/fall07/lec11.prn.pdf
+
+Some benchmarks:https://parasol.tamu.edu/dsmft/benchmarks/mp/ 
+
+Given:
+- obstacles
+- initial position of robot
+- final position of robot
+Goal: path from initial to final that avoids all the obstacles
+
+I don't have final position -or- obstacles
+
+Definitions:
+- Workspace: space with obstacles
+- Forbidden space: positions in which robot collides with obstacles
+- Free space: not forbidden
+If robot == point, workspace == configuration space
+
+Non-point robots
+- assuming convex robots
+- assume each obstacle is convex
+- can use Minkowski sum to find forbidden space
+
+
+
+
+*** MARRT: Medial Axis Biased Rapidly-Exploring Random Trees
+denny2014marrt
+
+Basically, an RRT with a bias towards the medial axis.
+
+*** Planning Algorithms and Rapidly Expanding Random Trees
+
+karaman2011sampling
+Sampling-based algorithms for optimal motion planning
+
+
+Book: Planning Algorithms by Steven M LaValle, 2006 (lavalle2006planning)
+
+**** TODO Implement RRTs
+
+*** LQR Trees
+LQR-Trees: Feedback Motion Planning via Sums-of-Squares Verification
+
+*** TODO Idea: Path planning based on local vector fields.
+
+** Voronoi diagram: given points, defines space which corresponds to closest point
+
+The Delaunay triangulation of a discrete point set P in general
+position corresponds to the dual graph of the Voronoi diagram for
+P. Special cases include the existence of three points on a line and
+four points on circle.
+
+** Exploration vs Exploitation
+
+http://en.wikipedia.org/wiki/Multi-armed_bandit
+http://en.wikipedia.org/wiki/Thompson_sampling
+
+* <2015-03-04 Wed>
+** Gabor Filters and DoG Pyramids
+There seems to be something up with bandpass filters.
+How can you configure deep learning to use bandpass filters.
+
+Code: haghighat2013identification
 
 * <2015-03-03 Tue>
 ** Ranking of CS Conferences
