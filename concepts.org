@@ -1,0 +1,14 @@
+* Reinforcement Learning
+** Papers
+Reinforcement learning in robotics: A survey (kober2013reinforcement)
+** Basic
+- state s: position/velocity
+- actions a: torques to motor
+- policy \pi: a function \pi that generates actions 
+- rewards R(s,a): success hits/energy consumption
+
+* Path Planning
+Two main sampling-based methods: RRTs and PRMs
+
+** Probablistic Roadmaps (PRMs)
+http://www.cs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf
