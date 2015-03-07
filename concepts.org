@@ -1,14 +1,93 @@
-* Reinforcement Learning
-** Papers
+#+TITLE: Concepts
+#+AUTHOR: Victor Gan
+* Robotics
+** Reinforcement Learning
+*** Papers
 Reinforcement learning in robotics: A survey (kober2013reinforcement)
-** Basic
+*** Reinforcement Learning vs Optimal Control
+kober2013reinforcement: 
+However, optimal con-
+trol assumes perfect knowledge of the system¡¯s description
+in the form of a model (i.e. a function T that describes what
+the next state of the robot will be given the current state and
+action). For such models, optimal control ensures strong
+guarantees which, nevertheless, often break down due to
+model and computational approximations. In contrast, rein-
+forcement learning operates directly on measured data and
+rewards from interaction with the environment. Reinforce-
+ment learning research has placed great focus on addressing
+cases which are analytically intractable using approxima-
+tions and data-driven techniques. One of the most important
+approaches to reinforcement learning within robotics cen-
+ters on the use of classical optimal control techniques (e.g.
+linear-quadratic regulation and differential dynamic pro-
+gramming (DDP)) to system models learned via repeated
+interaction with the environment (Atkeson, 1998; Bagnell
+and Schneider, 2001; Coates et al., 2009). A concise discus-
+sionofviewingreinforcementlearningas¡°adaptiveoptimal
+control¡± is presented by Sutton et al. (1991).
+
+*** Basic
 - state s: position/velocity
 - actions a: torques to motor
 - policy \pi: a function \pi that generates actions 
 - rewards R(s,a): success hits/energy consumption
 
-* Path Planning
-Two main sampling-based methods: RRTs and PRMs
+** Path Planning
+http://en.wikipedia.org/wiki/Motion_planning
 
-** Probablistic Roadmaps (PRMs)
+Basically:
+- [[State Space Exploration]] of feasible points + finding a path
+
+Two main sampling-based methods: RRTs and PRMs
+*** Piano Mover's Problem (Classic Motion Planning)
+http://www.cs.arizona.edu/classes/cs437/fall07/lec11.prn.pdf
+
+Some benchmarks:https://parasol.tamu.edu/dsmft/benchmarks/mp/ 
+
+Given:
+- obstacles
+- initial position of robot
+- final position of robot
+Goal: path from initial to final that avoids all the obstacles
+
+I don't have final position -or- obstacles
+
+Definitions:
+- Workspace: space with obstacles
+- Forbidden space: positions in which robot collides with obstacles
+- Free space: not forbidden
+If robot == point, workspace == configuration space
+
+Non-point robots
+- assuming convex robots
+- assume each obstacle is convex
+- can use Minkowski sum to find forbidden space
+
+*** Probablistic Roadmaps (PRMs)
 http://www.cs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf
+
+*** Rapidly Expanding Random Trees
+**** MARRT: Medial Axis Biased Rapidly-Exploring Random Trees
+denny2014marrt
+
+Basically, an RRT with a bias towards the medial axis.
+
+**** TODO LQR Trees
+LQR-Trees: Feedback Motion Planning via Sums-of-Squares Verification
+LQR-Trees: Feedback motion planning on sparse randomized trees (tedrake2009lqr)
+
+** Voronoi diagram: given points, defines space which corresponds to closest point
+The Delaunay triangulation of a discrete point set P in general
+position corresponds to the dual graph of the Voronoi diagram for
+P. Special cases include the existence of three points on a line and
+four points on circle.
+
+** State Space Exploration
+Exploring very large state spaces using genetic algorithms
+godefroid2004exploring
+*** Space Filling Tree
+http://en.wikipedia.org/wiki/Space-filling_tree
+http://en.wikipedia.org/wiki/Space-filling_curve
+
+* Computer Vision
